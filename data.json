@@ -1,0 +1,121 @@
+{
+  "departments": [
+    {
+      "department": "Kids"
+    },
+    {
+      "department": "Clothing"
+    },
+    {
+      "department": "Music"
+    },
+    {
+      "department": "Electronics"
+    },
+    {
+      "department": "Computers"
+    }
+  ],
+  "employees": [
+    {
+      "id": "36a46eca-12f0-4733-a57e-cbb955761f12",
+      "name": "Columbus",
+      "lastName": "Pfannerstill"
+    },
+    {
+      "id": "431d9eef-a1fb-4ef3-ade5-d4863219d3e6",
+      "name": "Dario",
+      "lastName": "Smitham"
+    },
+    {
+      "id": "25698526-5863-4242-98cb-e38515401d78",
+      "name": "Nicholaus",
+      "lastName": "Johns"
+    },
+    {
+      "id": "59cdd22d-b339-4f36-a43e-05540b17adf4",
+      "name": "Pasquale",
+      "lastName": "Deckow"
+    },
+    {
+      "id": "974bb692-b2a7-4e0a-a930-e90219a51364",
+      "name": "Stacy",
+      "lastName": "Romaguera"
+    },
+    {
+      "id": "d9a4b38f-ac32-4f95-96cd-d19448706cd8",
+      "name": "Jasen",
+      "lastName": "Feeney"
+    },
+    {
+      "id": "d6d5d504-90aa-4eb2-958f-7db557e9ab16",
+      "name": "Elsa",
+      "lastName": "D'Amore"
+    },
+    {
+      "id": "d2f80dfb-4853-4920-be32-b50ee2760692",
+      "name": "Winifred",
+      "lastName": "Jenkins"
+    },
+    {
+      "id": "693b872e-0ba4-481d-93df-760eeab21551",
+      "name": "Katheryn",
+      "lastName": "Abernathy"
+    },
+    {
+      "id": "f4ced2e1-0cc3-49f4-b68c-fa96a494cc42",
+      "name": "Wilburn",
+      "lastName": "Schulist"
+    },
+    {
+      "id": "41c8b24c-ad2e-42bd-ad0b-40df7b3f8041",
+      "name": "Orland",
+      "lastName": "Tillman"
+    },
+    {
+      "id": "750c8f9b-3a62-4c34-86c3-3529e9bfc216",
+      "name": "Maya",
+      "lastName": "Kuvalis"
+    },
+    {
+      "id": "f877851d-89d6-467d-9a9b-be77f64b94c5",
+      "name": "Monserrate",
+      "lastName": "Robel"
+    },
+    {
+      "id": "0623a2e0-1b72-46f0-99d3-511c2037e094",
+      "name": "Fanny",
+      "lastName": "Rosenbaum"
+    },
+    {
+      "id": "e98e2056-9302-4cd2-87d1-3defa5df875b",
+      "name": "Aracely",
+      "lastName": "Kohler"
+    },
+    {
+      "id": "490dbb5c-3e9c-4a4f-9808-2ebcd36d1b9b",
+      "name": "Hollie",
+      "lastName": "Abshire"
+    },
+    {
+      "id": "643fb7ef-d628-4124-a400-ed423437cfbd",
+      "name": "Stephan",
+      "lastName": "Pollich"
+    },
+    {
+      "id": "53a0d7ad-4d99-47c8-b481-1d59f4c1424a",
+      "name": "Deontae",
+      "lastName": "Haag"
+    },
+    {
+      "id": "6f519c71-e570-46ab-9810-18a87f739310",
+      "name": "Deon",
+      "lastName": "Vandervort"
+    },
+    {
+      "id": "40b8cacc-f597-43ea-a2d6-d8341f23b9c3",
+      "name": "Henry",
+      "lastName": "Dickens"
+    }
+  ]
+}

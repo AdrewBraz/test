@@ -1,0 +1,19 @@
+{
+  "departments": [
+    {
+      "department": "Kids"
+    },
+    {
+      "department": "Clothing"
+    },
+    {
+      "department": "Music"
+    },
+    {
+      "department": "Electronics"
+    },
+    {
+      "department": "Computers"
+    }
+  ]
+}
