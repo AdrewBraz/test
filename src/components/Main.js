@@ -11,6 +11,16 @@ export default class Main extends Component {
         super()
     }
 
+    componentWillUpdate(nextProps){
+        if(nextProps.location.pathname !== this.props.location.pathname){
+            if(nextProps.location.pathname === '/departments'){
+                this.props.fetchDepartments()
+            } else if(nextProps.location.pathname === '/employees'){
+                this.props.fetchDepartments()
+            }
+        }
+    }
+
     render(){
         console.log(this.props)
         return(

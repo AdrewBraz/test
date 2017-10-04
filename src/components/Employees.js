@@ -7,15 +7,11 @@ export default class Employees extends Component{
         super(props)
     }
 
-    handleRequest(){
-        this.props.fetchEmployees();
-    }
-
     render(){
         return(
             <div className="container">
                 <p>some text e</p>
-                <button className="btn" onClick= {this.handleRequest.bind(this)}> click</button>
+                <button className="btn"> click</button>
             </div>    
         )
     }
