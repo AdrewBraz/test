@@ -10,8 +10,16 @@ export default class Employees extends Component{
     render(){
         return(
             <div className="container">
-                <p>some text e</p>
-                <button className="btn"> click</button>
+              <table className="table">
+                  <thead>
+                      Employees
+                  </thead>
+                  <tbody>
+                      {this.props.employees.list.map(i => {
+                          return `<tr >${i.name}</tr>`
+                      })}
+                  </tbody>
+              </table>
             </div>    
         )
     }

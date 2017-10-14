@@ -1,19 +1,19 @@
 {
   "departments": [
     {
-      "department": "Kids"
+      "department": "Grocery"
     },
     {
-      "department": "Clothing"
+      "department": "Beauty"
+    },
+    {
+      "department": "Beauty"
+    },
+    {
+      "department": "Toys"
     },
     {
       "department": "Music"
-    },
-    {
-      "department": "Electronics"
-    },
-    {
-      "department": "Computers"
     }
   ]
 }

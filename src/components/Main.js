@@ -1,6 +1,7 @@
 import  React, { Component }from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
+
 import Menu from './Menu';
 import Home from './Home'
 import Departments from './Departments'
@@ -11,13 +12,13 @@ export default class Main extends Component {
         super()
     }
 
-    componentWillUpdate(nextProps){
+    componentWillReceiveProps(nextProps){
         if(nextProps.location.pathname !== this.props.location.pathname){
             if(nextProps.location.pathname === '/departments'){
                 this.props.fetchDepartments()
             } else if(nextProps.location.pathname === '/employees'){
-                this.props.fetchDepartments()
-            }
+                this.props.fetchEmployees()
+            } 
         }
     }
 

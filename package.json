@@ -4,6 +4,9 @@
   "description": "'test app'",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "prod": "set NODE_ENV=prodution && webpack -p"
+  },
   "dependencies": {
     "faker": "^4.1.0",
     "history": "^4.7.2",
