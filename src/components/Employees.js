@@ -7,16 +7,21 @@ export default class Employees extends Component{
         super(props)
     }
 
+    renderItems(obj){
+        for(let key in obj){
+            return (
+                <tr>{obj[key]}</tr>
+            )
+        }
+    }
+
     render(){
         return(
             <div className="container">
               <table className="table">
-                  <thead>
-                      Employees
-                  </thead>
                   <tbody>
-                      {this.props.employees.list.map(i => {
-                          return `<tr >${i.name}</tr>`
+                      {this.props.employees.list.map( item => {
+                         return this.renderItems(item)
                       })}
                   </tbody>
               </table>

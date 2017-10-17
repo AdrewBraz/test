@@ -5,7 +5,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "prod": "set NODE_ENV=prodution && webpack -p"
+    "prod": "set NODE_ENV=prodution && webpack -p",
+    "prod": "set NODE_ENV=development && webpack -d"
   },
   "dependencies": {
     "faker": "^4.1.0",

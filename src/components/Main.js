@@ -13,15 +13,19 @@ export default class Main extends Component {
     }
 
     componentWillReceiveProps(nextProps){
-        if(nextProps.location.pathname !== this.props.location.pathname){
-            if(nextProps.location.pathname === '/departments'){
-                this.props.fetchDepartments()
-            } else if(nextProps.location.pathname === '/employees'){
+        const nextLocation = nextProps.location.pathname;
+        const prevLocation = this.props.location.pathname;
+        const nextDepartments = nextProps.departments.list;
+        const prevDepartments = this.props.departments.list;
+        if(nextLocation !== prevLocation){
+            if(nextLocation === '/departments'){
+               this.props.fetchDepartments()
+            } else if(nextLocation === '/employees'){
                 this.props.fetchEmployees()
             } 
         }
     }
-
+    
     render(){
         console.log(this.props)
         return(
