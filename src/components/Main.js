@@ -12,22 +12,11 @@ export default class Main extends Component {
         super()
     }
 
-    componentWillReceiveProps(nextProps){
-        const nextLocation = nextProps.location.pathname;
-        const prevLocation = this.props.location.pathname;
-        const nextDepartments = nextProps.departments.list;
-        const prevDepartments = this.props.departments.list;
-        if(nextLocation !== prevLocation){
-            if(nextLocation === '/departments'){
-               this.props.fetchDepartments()
-            } else if(nextLocation === '/employees'){
-                this.props.fetchEmployees()
-            } 
-        }
+    componentWillReceiveProps(nextProps) {
+        
     }
     
     render(){
-        console.log(this.props)
         return(
             <div> 
                 <Menu {...this.props} />

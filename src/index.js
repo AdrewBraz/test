@@ -3,9 +3,8 @@ import { render } from 'react-dom';
 require('bootstrap')
 import "bootstrap/scss/bootstrap.scss";
 
-import Menu from './components/Menu';
+import Main from './components/Main';
 
-import App from './components/App';
 import { BrowserRouter, Router, Route, Switch } from 'react-router-dom'
 import { ConnectedRouter } from 'react-router-redux'
 
@@ -16,8 +15,8 @@ const router = (
     <Provider store={ store }> 
         <BrowserRouter >
             <ConnectedRouter history={history}>
-                <App>
-                </App>   
+                <Main>
+                </Main>   
             </ConnectedRouter>    
         </BrowserRouter> 
     </Provider>     

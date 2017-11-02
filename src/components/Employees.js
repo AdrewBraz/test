@@ -1,41 +1,70 @@
 import  React, { Component } from 'react'
 import Counter from '../helpers/Counter';
+import TableHeader from './TableHeader'
+import TableRow from './TableRow'
 import axios from 'axios'
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
+import * as actions from '../actions/actions'
+import { withRouter } from 'react-router-dom'
 
 
-export default class Employees extends Component{
+class Employees extends Component{
     constructor(props){
         super(props)
     }
 
-    renderItems(obj){
-        const counter = Counter.increment();
-        return(
-            <tr>
-                <td>{obj.id}</td>
-                <td>{obj.name}</td>
-                <td>{obj.lastName}</td>
-            </tr>
-        )
-    }
-
-    renderHeader(obj){
-        const arr = Object.keys(obj);
-        arr.map(item => <th>{item}</th>)
+    componentDidMount() {
+        this.props.fetchEmployees()
     }
 
     render(){
-        return(
-            <div className="container">
-              <table className="table">
-                  <tbody>
-                      {this.props.employees.list}
-                      {this.props.employees.list.map( item => {
-                         return this.renderItems(item)
-                      })}
-                  </tbody>
-              </table>
-            </div>    
+        if(this.props.employees.list.length > 0){
+            const { list } = this.props.employees;
+            const categories = Object.keys(list[0]);
+            const rows = [];
+            list.forEach(item => {
+                const key = Counter.increment();
+                console.log(key)
+                const arr = Object.values(item);
+                rows.push(<TableRow key={key} row={arr}/>);
+            })
+
+            return(
+                <div className="container">
+                  <table className="table">
+                      <thead>
+                          <tr>
+                              {categories.map(item => {
+                                   return <TableHeader key={item} category={item} />
+                                })}
+                          </tr>    
+                      </thead>
+                      <tbody>
+                          { rows }
+                      </tbody>
+                  </table>
+                </div>    
+            )
+        } return (
+            <div>
+                empty
+            </div>
         )
+        
     }
 }
+
+function mapStateToProps(state){
+    return{
+        employees: state.employees
+    }
+}
+
+function mapDispatchToProps(dispatch){
+    return bindActionCreators( actions, dispatch )
+}
+
+Employees = withRouter(connect(mapStateToProps, mapDispatchToProps)(Employees))
+
+export default Employees
