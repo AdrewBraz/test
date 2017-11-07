@@ -17,3 +17,12 @@ export function fetchDepartments(){
           .catch((err) => dispatch({ type: "FETCH_DEPARTMENTS_REJECTED", payload: err}))
     }
 }
+
+export function editDepartment(id, text){
+    return {type: "EDIT_DEPARTMENT", id, text}
+}
+
+
+export function editEmployee(id, text){
+    return {type: "EDIT_EMPLOYEE", id, text}
+}

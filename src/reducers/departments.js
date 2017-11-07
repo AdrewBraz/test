@@ -15,6 +15,10 @@ export default function Departments(state = initialState, action){
         case "FETCH_DEPARTMENTS_REJECTED":
           return {...state, fetching: false, error: true}
           break;
+        case "EDIT_DEPARTMENT":
+          return {...state,
+                   list: list.map((item) => item.id === action.id ? item.text = action.text : item)
+                 }
         default:
           return state;
           break;  
