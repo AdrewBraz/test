@@ -13,23 +13,19 @@ export default class TableCell extends Component {
     this.setState({ edit: true });
   }
 
-  handleSave(id, text){
-    if(this.props.location.path === "/employees"){
-      this.props.editEmployee(id, text)
-    } else if(this.props.location.path === "/departments"){
-      this.props.editDepartment(id, text)
-    }
+  handleSave(id, text, category){
+    this.props.editEmployee(id, text, category)
     this.setState({edit: false})
   }
 
 
   render() {
     const { edit } = this.state;
-    const { item } = this.props;
+    const { item, id, category } = this.props;
     let elem;
     if(this.state.edit){
       elem = (
-          <TextInput onSave={(text) => this.handleSave(item.id, text)}/>
+          <TextInput text={ item } onSave={(text) => this.handleSave(id, text, category)}/>
       )
     } else {
       elem = (
@@ -39,7 +35,7 @@ export default class TableCell extends Component {
       )
     }
     return (
-        <td>
+        <td onDoubleClick={ this.handleDoubleClick.bind(this)}>
           { elem }
         </td>   
     );

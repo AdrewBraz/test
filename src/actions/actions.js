@@ -18,11 +18,11 @@ export function fetchDepartments(){
     }
 }
 
-export function editDepartment(id, text){
-    return {type: "EDIT_DEPARTMENT", id, text}
+export function editDepartment(id, text, category){
+    return {type: "EDIT_DEPARTMENT", id, text, category}
 }
 
 
-export function editEmployee(id, text){
-    return {type: "EDIT_EMPLOYEE", id, text}
+export function editEmployee(id, text, category){
+    return {type: "EDIT_EMPLOYEE", id, text, category}
 }

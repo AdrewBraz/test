@@ -5,7 +5,7 @@ export default class TextInput extends Component {
     super(props)
     
     this.state = { 
-      text: ""
+      text: this.props.text || ''
      }
   
     }
@@ -33,9 +33,9 @@ export default class TextInput extends Component {
         placeholder={this.props.placeholder}
         autoFocus="true"
         value={this.state.text}
-        onBlur={this.handleBlur}
-        onChange={this.handleChange}
-        onKeyDown={this.handleSubmit} />
+        onBlur={this.handleBlur.bind(this)}
+        onChange={this.handleChange.bind(this)}
+        onKeyDown={this.handleSubmit.bind(this)} />
     )
   }
 }
