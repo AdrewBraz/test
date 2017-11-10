@@ -6,7 +6,8 @@
   "license": "MIT",
   "scripts": {
     "prod": "set NODE_ENV=prodution && webpack -p",
-    "dev": "set NODE_ENV=development && webpack -d"
+    "dev": "set NODE_ENV=development && webpack -d",
+    "start": "rimraf data.json dep.json emp.json && node data.js"
   },
   "dependencies": {
     "faker": "^4.1.0",

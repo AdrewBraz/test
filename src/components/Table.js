@@ -23,17 +23,17 @@ export default class Table extends Component {
       rows.push(<TableRow {...this.props} categories={ categories } id={item.id} key={key} row={arr}/>);
     })
 
-    return(
-      <table>
-        <thead>
-          <tr>
-            {categories.map(item => <TableHeader key={item} category={item}/>)}
-          </tr>
-        </thead>
-        <tbody>
-          { rows }
-        </tbody>
-      </table>
+    return( 
+        <table>
+          <thead>
+            <tr>
+              {categories.map(item => <TableHeader sortDepartments={this.props.sortDepartments} sortKey={item} key={item} category={item}/>)}
+            </tr>
+          </thead>
+          <tbody>
+            { rows }
+          </tbody>
+        </table>
     );
   }
 }

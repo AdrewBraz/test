@@ -1,3 +1,6 @@
+import sortArray from '../helpers/Sort';
+
+
 const initialState = {
     list: [],
     fetching: false,
@@ -19,6 +22,11 @@ export default function Departments(state = initialState, action){
           return {...state,
                    list: list.map((item) => item.id === action.id ? item.text = action.text : item)
                  }
+        case "SORT_DEPARTMENTS":
+          const list = state.list;
+          const { sortKey, sortDir} = action;
+          return { list: sortArray(list, sortKey, sortDir), ...state}
+        
         default:
           return state;
           break;  

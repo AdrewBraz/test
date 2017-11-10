@@ -26,3 +26,11 @@ export function editDepartment(id, text, category){
 export function editEmployee(id, text, category){
     return {type: "EDIT_EMPLOYEE", id, text, category}
 }
+
+export function sortEmployees(sortKey, sortDir){
+    return {type: "SORT_EMPLOYEES", sortKey, sortDir}
+}
+
+export function sortDepartments(sortKey, sortDir){
+    return {type: "SORT_DEPARTMENTS", sortKey, sortDir}
+}

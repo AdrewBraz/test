@@ -16,10 +16,10 @@ class Departments extends Component{
     }
 
     render(){
-        const { list } = this.props.employees
+        const { list } = this.props.departments
         return(
             <div className="container">
-                { list.length > 0 ? <Table list={list} /> : null}
+                { list.length > 0 ? <Table {...this.props} list={list} /> : null}
             </div>
         )
     }
