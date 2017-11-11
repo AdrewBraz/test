@@ -20,7 +20,7 @@ export default class TableHeader extends Component {
 
   handleClick(sortKey, sortDir){
     this.toggleDir()
-    this.props.sortDepartments(sortKey, sortDir)
+    this.props.sortData(sortKey, sortDir)
   }
   
   render() {

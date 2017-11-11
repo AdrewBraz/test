@@ -5,7 +5,9 @@ const fs = require('fs')
 
 function department() {
   return {
-    department: faker.commerce.department()
+    id: faker.random.number(),
+    department: faker.commerce.department(),
+    num: faker.random.number()
   };
 }
 
@@ -18,11 +20,11 @@ function aPerson() {
   }
 
 var departmentData = {
-    departments: nLoop(5).map(department)
+    departments: nLoop(35).map(department),
 };
 
 var employeeData = {
-    employees: nLoop(20).map(aPerson)
+    employees: nLoop(50).map(aPerson)
 };
 
 fs.writeFileSync('dep.json', JSON.stringify(departmentData, null, 2), 'utf-8');

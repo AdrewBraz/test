@@ -7,33 +7,46 @@ import TableRow from './TableRow'
 export default class Table extends Component {
   constructor(props){
     super(props)
+    this.state = {
+      list: this.props.filtered || []
+    }
   }
 
-  handleClick(e){
-    console.log(e)
-  }
+  componentWillReceiveProps(nextProps) {
+        this.setState({ list: nextProps.filtered })
+    }
 
-  render() {
-    const { list } = this.props;
+  renderTable(){
+    const { list } = this.state;
     const categories = Object.keys(list[0]);
     const rows = [];
     list.forEach(item => {
-      const key = Counter.increment();
-      const arr = Object.values(item);
-      rows.push(<TableRow {...this.props} categories={ categories } id={item.id} key={key} row={arr}/>);
+    const key = Counter.increment();
+    const arr = Object.values(item);
+    rows.push(<TableRow {...this.props} categories={ categories } id={item.id} key={key} row={arr}/>);
     })
-
     return( 
         <table>
           <thead>
             <tr>
-              {categories.map(item => <TableHeader sortDepartments={this.props.sortDepartments} sortKey={item} key={item} category={item}/>)}
+              {categories.map(item => <TableHeader sortData={this.props.sortData} sortKey={item} key={item} category={item}/>)}
             </tr>
           </thead>
           <tbody>
             { rows }
           </tbody>
         </table>
+    );
+
+  }
+
+  render() {
+    const { list } = this.state;
+
+    return( 
+        <div>
+          { list.length ? this.renderTable() : null}
+        </div>
     );
   }
 }

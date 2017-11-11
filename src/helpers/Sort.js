@@ -8,7 +8,7 @@ export default function sortArray(arr, sortKey, sortDir){
       val = -1;
     }
     if(sortDir === "DESC"){
-      val = val * -1
+      val = val * -1 
     }
     return val
   })

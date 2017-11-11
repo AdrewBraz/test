@@ -14,7 +14,7 @@ export default class TableCell extends Component {
   }
 
   handleSave(id, text, category){
-    this.props.editEmployee(id, text, category)
+    this.props.editData(id, text, category)
     this.setState({edit: false})
   }
 

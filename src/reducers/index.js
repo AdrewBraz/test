@@ -1,9 +1,8 @@
 import { combineReducers } from 'redux'
 import {routerReducer } from 'react-router-redux'
 
-import employees from './employees'
-import departments from './departments'
+import allData from './allData'
 
-const rootReducer = combineReducers({employees, departments, routing: routerReducer})
+const rootReducer = combineReducers({allData, routing: routerReducer})
 
 export default rootReducer

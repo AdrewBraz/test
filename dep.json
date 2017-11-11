@@ -1,19 +1,179 @@
 {
   "departments": [
     {
-      "department": "Grocery"
+      "id": 19049,
+      "department": "Grocery",
+      "num": 57406
     },
     {
-      "department": "Beauty"
+      "id": 88463,
+      "department": "Games",
+      "num": 6241
     },
     {
-      "department": "Beauty"
+      "id": 91439,
+      "department": "Jewelery",
+      "num": 50015
     },
     {
-      "department": "Toys"
+      "id": 61003,
+      "department": "Games",
+      "num": 69465
     },
     {
-      "department": "Music"
+      "id": 14740,
+      "department": "Beauty",
+      "num": 73645
+    },
+    {
+      "id": 21090,
+      "department": "Beauty",
+      "num": 30615
+    },
+    {
+      "id": 32908,
+      "department": "Home",
+      "num": 39454
+    },
+    {
+      "id": 14045,
+      "department": "Clothing",
+      "num": 93271
+    },
+    {
+      "id": 64365,
+      "department": "Automotive",
+      "num": 83087
+    },
+    {
+      "id": 77525,
+      "department": "Tools",
+      "num": 55565
+    },
+    {
+      "id": 22094,
+      "department": "Tools",
+      "num": 36161
+    },
+    {
+      "id": 62631,
+      "department": "Shoes",
+      "num": 20474
+    },
+    {
+      "id": 5213,
+      "department": "Industrial",
+      "num": 56539
+    },
+    {
+      "id": 94347,
+      "department": "Beauty",
+      "num": 46481
+    },
+    {
+      "id": 56470,
+      "department": "Automotive",
+      "num": 21015
+    },
+    {
+      "id": 14087,
+      "department": "Games",
+      "num": 38359
+    },
+    {
+      "id": 23888,
+      "department": "Garden",
+      "num": 5118
+    },
+    {
+      "id": 23185,
+      "department": "Tools",
+      "num": 83096
+    },
+    {
+      "id": 9070,
+      "department": "Sports",
+      "num": 57192
+    },
+    {
+      "id": 59659,
+      "department": "Beauty",
+      "num": 47074
+    },
+    {
+      "id": 922,
+      "department": "Kids",
+      "num": 84553
+    },
+    {
+      "id": 47729,
+      "department": "Shoes",
+      "num": 88414
+    },
+    {
+      "id": 95148,
+      "department": "Shoes",
+      "num": 19575
+    },
+    {
+      "id": 68247,
+      "department": "Electronics",
+      "num": 40334
+    },
+    {
+      "id": 30969,
+      "department": "Garden",
+      "num": 60766
+    },
+    {
+      "id": 98168,
+      "department": "Grocery",
+      "num": 41342
+    },
+    {
+      "id": 44278,
+      "department": "Computers",
+      "num": 22629
+    },
+    {
+      "id": 19159,
+      "department": "Games",
+      "num": 83393
+    },
+    {
+      "id": 25801,
+      "department": "Health",
+      "num": 37210
+    },
+    {
+      "id": 45432,
+      "department": "Health",
+      "num": 12855
+    },
+    {
+      "id": 52277,
+      "department": "Computers",
+      "num": 37224
+    },
+    {
+      "id": 29560,
+      "department": "Jewelery",
+      "num": 82922
+    },
+    {
+      "id": 7564,
+      "department": "Electronics",
+      "num": 77079
+    },
+    {
+      "id": 42158,
+      "department": "Health",
+      "num": 49265
+    },
+    {
+      "id": 42198,
+      "department": "Sports",
+      "num": 88906
     }
   ]
 }
