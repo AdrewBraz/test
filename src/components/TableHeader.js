@@ -32,7 +32,7 @@ export default class TableHeader extends Component {
     const { sortKey } = this.props;
     const sortDir = this.state.sortDir;
     return (
-        <th onClick={ () => this.handleClick(sortKey, sortDir)}>
+        <th className="header" onClick={ () => this.handleClick(sortKey, sortDir)}>
         {this.props.category}
         { sortDir === 'DESC' ? <span> &#8593;</span> : <span> &#8595;</span>}</th>   
     );
