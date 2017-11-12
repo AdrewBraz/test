@@ -8,33 +8,31 @@ export default class Menu extends Component{
 
     render(){
         return(
+          <div>
             <div className="container-fluid">
               <div className="jumbotron jumbotron-fluid">
                 <div className="container">
-                  <h1 className="display-3">Fluid jumbotron</h1>
-                  <p className="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+                  <h1 className="display-3">React-Redux Table</h1>
+                  <p className="lead">This app is build with React-Redux. You can sort, edit and filter this table</p>
                 </div>
               </div>
-              <nav className="navbar navbar-toggleable-md navbar-light bg-faded">
-                <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                   <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className="collapse navbar-collapse" id="navbarNavDropdown">
-                  <ul className="navbar-nav">
-                    <li className="nav-item">
+            </div>
+            <div className="container-fluid">
+              <div className="main-nav">
+                <ul className="nav nav-pills justify-content-center">
+                  <li className="nav-item">
                     <NavLink className="nav-link" to="/">Home</NavLink>
-                    </li>
-                    <li className="nav-item">
+                  </li>
+                  <li className="nav-item">
                     <NavLink className="nav-link" to="/departments">Departments</NavLink>
-                    </li>
-                    <li className="nav-item">
+                  </li>
+                  <li className="nav-item">
                     <NavLink className="nav-link" to="/employees">Employees</NavLink>
                     </li>
-                  </ul>
-                </div>
-              </nav>
-               
-            </div>   
+                </ul>
+              </div>  
+            </div>
+          </div>    
         )
     }
 }

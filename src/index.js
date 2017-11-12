@@ -1,7 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-require('bootstrap')
-import "bootstrap/scss/bootstrap.scss";
+import style from './style.scss'
 
 import Main from './components/Main';
 

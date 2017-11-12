@@ -8,7 +8,7 @@ export default class Home extends Component{
     render(){
         return(
             <div className="container">
-                <h1>Example heading <span className="badge badge-default">New</span></h1>
+                <h1>Click navigation links</h1>
             </div>    
         )
     }

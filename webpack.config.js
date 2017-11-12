@@ -2,6 +2,7 @@ const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const bootstrapEntryPoints = require('./webpack.bootstrap.config')
 
 
 const isProd = process.env.NODE_ENV === 'production';
@@ -12,15 +13,18 @@ const cssProd =  ExtractTextPlugin.extract({
                 })
 const cssConfig = isProd ? cssProd : cssDev;
 
+const bootstrapConfig = isProd ? bootstrapEntryPoints.prod : bootstrapEntryPoints.dev;
+
 module.exports = {
     entry: {
-        app: './src/index.js'
+        app: './src/index.js',
+        bootstrap: bootstrapConfig
     },
 
     output: {
         path: path.resolve(__dirname, './public'),
 
-        filename: 'bundle.js'
+        filename: '[name].js'
     },
 
     devServer: {
@@ -45,7 +49,11 @@ module.exports = {
                 use: {
                     loader: 'babel-loader'
                 }
-            }
+            },
+            { test: /bootstrap[\/\\]dist[\/\\]js[\/\\]umd[\/\\]/, loader: 'imports-loader?jQuery=jquery' },
+            
+            { test: /\.(woff2?|svg)$/, loader: 'url-loader?limit=10000' },
+            { test: /\.(ttf|eot)$/, loader: 'file-loader' },
         ]
     },
 

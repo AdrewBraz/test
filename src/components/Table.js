@@ -26,8 +26,8 @@ export default class Table extends Component {
     rows.push(<TableRow {...this.props} categories={ categories } id={item.id} key={key} row={arr}/>);
     })
     return( 
-        <table>
-          <thead>
+        <table className="table table-bordered table-striped table-hover">
+          <thead className="thead-dark">
             <tr>
               {categories.map(item => <TableHeader sortData={this.props.sortData} sortKey={item} key={item} category={item}/>)}
             </tr>

@@ -28,12 +28,11 @@ export default class TextInput extends Component {
   
   render() {
     return (
-      <input className=""
+      <input className="edit-input"
         type="text"
         placeholder={this.props.placeholder}
         autoFocus="true"
         value={this.state.text}
-        onBlur={this.handleBlur.bind(this)}
         onChange={this.handleChange.bind(this)}
         onKeyDown={this.handleSubmit.bind(this)} />
     )

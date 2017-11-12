@@ -13,13 +13,17 @@ export default class FilterInput extends Component {
 
   render() {
     return (
-      <input className="input"
-        ref={ (input) => this.textInput = input}
-        type="text"
-        placeholder="filter"
-        autoFocus="true"
-        onChange={this.handleChange.bind(this)}
-      />
+      <div className="input-wrapper">
+        <div className="input-group input-group-lg">
+          <input className="form-control"
+            ref={ (input) => this.textInput = input}
+            type="text"
+            placeholder="filter"
+            autoFocus="true"
+            onChange={this.handleChange.bind(this)}
+          />
+        </div>  
+      </div>  
     );
   }
 }
