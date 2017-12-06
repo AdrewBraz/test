@@ -1,4 +1,4 @@
 {
-    "presets": ["env","es2017", "react", "react-hmre"],
+    "presets": [["env", {"modules": false}],"es2017", "react", "react-hmre"],
     "plugins": ["transform-object-rest-spread"]
 }

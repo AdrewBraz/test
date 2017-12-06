@@ -5,9 +5,10 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "start": "node ./server.js",
     "prod": "set NODE_ENV=prodution && webpack -p",
     "dev": "set NODE_ENV=development && webpack -d",
-    "start": "rimraf data.json dep.json emp.json && node data.js"
+    "data": "rimraf data.json dep.json emp.json && node data.js"
   },
   "dependencies": {
     "body-parser": "^1.18.2",
